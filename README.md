@@ -1,4 +1,6 @@
 <h1 align="center">Self-Operating Computer Framework</h1>
+<h2 align="center">Saadi-Code</h2>
+
 
 <p align="center">
   <strong>A framework to enable multimodal models to operate a computer.</strong>
@@ -22,13 +24,9 @@
 - **Integration**: Currently integrated with **GPT-4o, Gemini Pro Vision, Claude 3 and LLaVa.**
 - **Future Plans**: Support for additional models.
 
-## Ongoing Development
-At [HyperwriteAI](https://www.hyperwriteai.com/), we are developing Agent-1-Vision a multimodal model with more accurate click location predictions.
-
 ## Agent-1-Vision Model API Access
 We will soon be offering API access to our Agent-1-Vision model.
 
-If you're interested in gaining access to this API, sign up [here](https://othersideai.typeform.com/to/FszaJ1k8?typeform-source=www.hyperwriteai.com).
 
 ## Demo
 
@@ -62,20 +60,6 @@ operate
 
 ### Multimodal Models  `-m`
 An additional model is now compatible with the Self Operating Computer Framework. Try Google's `gemini-pro-vision` by following the instructions below. 
-
-Start `operate` with the Gemini model
-```
-operate -m gemini-pro-vision
-```
-
-**Enter your Google AI Studio API key when terminal prompts you for it** If you don't have one, you can obtain a key [here](https://makersuite.google.com/app/apikey) after setting up your Google AI Studio account. You may also need [authorize credentials for a desktop application](https://ai.google.dev/palm_docs/oauth_quickstart). It took me a bit of time to get it working, if anyone knows a simpler way, please make a PR.
-
-#### Try Claude `-m claude-3`
-Use Claude 3 with Vision to see how it stacks up to GPT-4-Vision at operating a computer. Navigate to the [Claude dashboard](https://console.anthropic.com/dashboard) to get an API key and run the command below to try it. 
-
-```
-operate -m claude-3
-```
 
 #### Try LLaVa Hosted Through Ollama `-m llava`
 If you wish to experiment with the Self-Operating Computer Framework using LLaVA on your own machine, you can with Ollama!   
@@ -135,46 +119,9 @@ The Self-Operating Computer Framework now integrates Optical Character Recogniti
 
 Based on recent tests, OCR performs better than `som` and vanilla GPT-4 so we made it the default for the project. To use the OCR mode you can simply write: 
 
- `operate` or `operate -m gpt-4-with-ocr` will also work. 
-
-### Set-of-Mark Prompting `-m gpt-4-with-som`
-The Self-Operating Computer Framework now supports Set-of-Mark (SoM) Prompting with the `gpt-4-with-som` command. This new visual prompting method enhances the visual grounding capabilities of large multimodal models.
-
-Learn more about SoM Prompting in the detailed arXiv paper: [here](https://arxiv.org/abs/2310.11441).
-
-For this initial version, a simple YOLOv8 model is trained for button detection, and the `best.pt` file is included under `model/weights/`. Users are encouraged to swap in their `best.pt` file to evaluate performance improvements. If your model outperforms the existing one, please contribute by creating a pull request (PR).
-
-Start `operate` with the SoM model
+ `saad` or `saad -m gpt-4-with-ocr` will also work. 
 
 ```
 operate -m gpt-4-with-som
 ```
 
-
-
-## Contributions are Welcomed!:
-
-If you want to contribute yourself, see [CONTRIBUTING.md](https://github.com/OthersideAI/self-operating-computer/blob/main/CONTRIBUTING.md).
-
-## Feedback
-
-For any input on improving this project, feel free to reach out to [Josh](https://twitter.com/josh_bickett) on Twitter. 
-
-## Join Our Discord Community
-
-For real-time discussions and community support, join our Discord server. 
-- If you're already a member, join the discussion in [#self-operating-computer](https://discord.com/channels/877638638001877052/1181241785834541157).
-- If you're new, first [join our Discord Server](https://discord.gg/YqaKtyBEzM) and then navigate to the [#self-operating-computer](https://discord.com/channels/877638638001877052/1181241785834541157).
-
-## Follow HyperWriteAI for More Updates
-
-Stay updated with the latest developments:
-- Follow HyperWriteAI on [Twitter](https://twitter.com/HyperWriteAI).
-- Follow HyperWriteAI on [LinkedIn](https://www.linkedin.com/company/othersideai/).
-
-## Compatibility
-- This project is compatible with Mac OS, Windows, and Linux (with X server installed).
-
-## OpenAI Rate Limiting Note
-The ```gpt-4o``` model is required. To unlock access to this model, your account needs to spend at least \$5 in API credits. Pre-paying for these credits will unlock access if you haven't already spent the minimum \$5.   
-Learn more **[here](https://platform.openai.com/docs/guides/rate-limits?context=tier-one)**
